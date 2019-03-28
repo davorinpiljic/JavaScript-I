@@ -79,7 +79,6 @@ for (let i = 0; i < inventory.length; i++) {
   carModels = carModels.sort()
 }
   return carModels
-
 }
 console.log(modelAlphabetical());
 
@@ -102,12 +101,12 @@ for (let i = 0; i < carYears.length; i++) {
   if (carYears[i] < 2000) {
     oldCars[i] = carYears[i]
   }
-}
-
-
-return oldCars
 
 }
+
+return oldCars.length
+}
+
 console.log(carsOlderThan2000()); 
 
 // ==== Challenge 6 ====
@@ -116,12 +115,13 @@ let bmwAndAudi = [];
 const audiBmwOnly = function() {
   for (let i = 0; i < inventory.length; i++) {
     if (inventory[i]["car_make"] === "BMW" || inventory[i]["car_make"] === "Audi") {
-      bmwAndAudi[i] = inventory[i]["car_make"]
+      bmwAndAudi[i] = inventory[i]
     }
   }
   return bmwAndAudi
 }
-console.log(audiBmwOnly());
+
+console.log(audiBmwOnly())
 
 
 
